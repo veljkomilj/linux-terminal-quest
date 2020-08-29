@@ -4,7 +4,7 @@ This is port of Terminal Quest application from Kano OS which should be able to 
 
 Terminal question is an introduction to terminal commands in the style of text adventure game.
 
-# How to use install it
+## How to use install it
 
 Install requirements:  
 ```pip install -r requirements.txt```
@@ -12,11 +12,11 @@ Install requirements:
 Run the game:  
 ```python2 ./bin/linux-story-gui```
 
-# Repository for the original project
+## Repository for the original project
 https://github.com/KanoComputing/terminal-quest
 
 
-# Options
+## Options
 
 ```
 linux-story-gui launches the application Terminal Quest at different points in the story.
