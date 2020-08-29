@@ -12,7 +12,7 @@ Install requirements:
 Run the game:  
 ```python2 ./bin/linux-story-gui```
 
-# Repository for original project
+# Repository for the original project
 https://github.com/KanoComputing/terminal-quest
 
 
