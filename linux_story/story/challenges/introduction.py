@@ -10,6 +10,7 @@ import os
 from linux_story.KanoCmd import KanoCmd
 from linux_story.StepTemplate import StepTemplate
 
+from kano_i18n.translation_stub import _
 
 class StepTemplateLs(StepTemplate):
     TerminalClass = KanoCmd

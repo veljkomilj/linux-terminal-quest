@@ -4,6 +4,8 @@
 # License: http://www.gnu.org/licenses/gpl-2.0.txt GNU GPL v2
 #
 
+from kano_i18n.translation_stub import _
+
 chapters = {
     1: {
         'start_challenge': 1,

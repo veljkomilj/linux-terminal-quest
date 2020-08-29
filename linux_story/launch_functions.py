@@ -6,6 +6,9 @@
 # The functions which starts off the game at the specified challenge and step.
 
 import sys
+import os
+sys.path.append(os.path.dirname(os.path.realpath(__file__)))
+
 
 from linux_story.common import tq_file_system
 from linux_story.file_creation.FileTree import FileTree
