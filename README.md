@@ -1,18 +1,20 @@
+# Terminal Quest Linux Port
 
-# Terminal Quest
+This is port of Terminal Quest application from Kano OS which should be able to run on any Linux distribution.
 
-This is the source code for the Terminal Quest app available for Kano OS.
-It is an introduction to terminal commands in the style of a text adventure game.
+Terminal question is an introduction to terminal commands in the style of text adventure game.
 
-# How to install it
+# How to use install it
 
-## Kano OS
-linux-story is installed by default on Kano OS, and is provided as a debian package in our repositories. As it has a lot of dependencies from other packages in Kano OS, it is recommended you run it on Kano OS.
- - Package name: linux-story
- - Executable: /usr/bin/linux-story-gui
+Install requirements:  
+```pip install -r requirements.txt```
 
-# How Terminal Quest works
-For a more detailed breakdown, read the [development wiki page](https://github.com/KanoComputing/linux-tutorial/wiki/Development).
+Run the game:  
+```python2 ./bin/linux-story-gui```
+
+# Repository for original project
+https://github.com/KanoComputing/terminal-quest
+
 
 # Options
 
