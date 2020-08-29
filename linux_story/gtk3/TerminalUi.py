@@ -10,7 +10,7 @@ import os
 
 from gi import require_version
 require_version('Gtk', '3.0')
-require_version('Vte', '2.90')
+require_version('Vte', '2.91')
 
 from gi.repository import Vte, GLib, Gdk, Pango
 
@@ -21,12 +21,13 @@ class TerminalUi(Vte.Terminal):
         Vte.Terminal.__init__(self)
         self.__dark = dark
 
-        self.fork_command_full(
+        self.spawn_sync(
             Vte.PtyFlags.DEFAULT,
             os.environ['HOME'],
             ["/bin/sh"],
             [],
             GLib.SpawnFlags.DO_NOT_REAP_CHILD,
+            None,
             None,
             None
         )
@@ -49,6 +50,10 @@ class TerminalUi(Vte.Terminal):
     def __apply_fg_and_bg_colours(self):
         fg_color = Gdk.Color.parse("#ffffff")[1]
         bg_color = self.__get_bg_colour()
+
+        fg_color = Gdk.RGBA(*fg_color.to_floats())
+        bg_color = Gdk.RGBA(*bg_color.to_floats())
+        
         self.set_colors(fg_color, bg_color, [])
         self.show_all()
 
@@ -59,7 +64,8 @@ class TerminalUi(Vte.Terminal):
             return Gdk.Color.parse("#262626")[1]
 
     def feed_child(self, command):
-        Vte.Terminal.feed_child(self, command, len(command))
+        # Vte.Terminal.feed_child(self, command, len(command))
+        Vte.Terminal.feed_child(self, command)
 
     def launch_command(self, command):
         command = "temp=$(tty) ; " + command + " > $temp | reset\n"

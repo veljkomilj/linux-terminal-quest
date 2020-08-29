@@ -55,7 +55,8 @@ def get_max_challenge_number():
     '''
 
     # Hardcoded path, perhaps change it later
-    path = "/usr/share/kano-profile/rules/app_profiles.json"
+    # path = "/usr/share/kano-profile/rules/app_profiles.json"
+    path = "./stuff/app_profiles.json"
     f = open(path)
     str_data = f.read()
     f.close()

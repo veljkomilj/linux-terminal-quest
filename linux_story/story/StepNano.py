@@ -4,6 +4,7 @@ import os
 import time
 
 from linux_story.PlayerLocation import generate_real_path
+from kano_i18n.translation_stub import _
 
 
 class StepNano:
